@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container mx-10 my-5">
+    {% for todos in todo  %}
+    <div class="alert alert-primary border-dark"  type = 'checkbox' >
+      <p><a> {{todos.id}}</a> 
+        <a class="block mx-5" >{{todos.title}}</a> 
+        <a class="text my-5">{{todos.discription}}</a>
+        <button style="float: right;" >DONE</button>
+        <button style="float: right;" >DELETE</button>
+      </p>
+    </div>    
+    {% endfor %} 
+  </div>
+{% endblock body %}
